@@ -13,7 +13,7 @@ LAUNCH='/c/Program Files (x86)/uTorrent/uTorrent.exe'
 for show in $SHOWS; do
 	echo --- $show ---
 	for recent in $RECENT; do
-		if echo $recent | grep $show; then
+		if echo $recent | grep -i $show; then
 			echo $recent
 			"${LAUNCH}" $recent &
 		fi
